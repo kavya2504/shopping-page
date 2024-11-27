@@ -1,0 +1,158 @@
+/* 1. i need to reset the padding and margin so that the browser defaults do not work.
+i am choosing to set the box-sizzing to border-box value.
+this is more comfortable for me to work with. for these styling,i use the universal selector(*) */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+}
+
+body {
+  /* Styling for the header */
+  header#site-header {
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
+
+    div.site-logo {
+      height: 100%;
+      padding-left: 10px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    h1 {
+      color: burlywood;
+    }
+
+    nav {
+      margin-right: 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      a {
+        color: #f5d142;
+        font-size: large;
+        padding: 8px 12px;
+        margin: 0 5px;
+        text-decoration: none;
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 1s, color 1s;
+      }
+
+      a:hover {
+        background-color: rgb(175, 96, 96);
+        color: rgb(0, 88, 34);
+      }
+    }
+  }
+
+  /* Styling for the product cards */
+  main {
+    section#products {
+      border: 1px solid;
+      /* width-top: 80%  */
+      margin-top: 50px;
+      width: 90%;
+      margin: auto;
+      /* margin-top:50px ; */
+      .container {
+        /*styling for individual card*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        div.card {
+          height: 260px;
+          width: 200px;
+          margin: 10px;
+          /* border : 1px solid;*/
+          box-shadow: 3px 2px 2px 1px rgb(143, 143, 143);
+          border-radius: 2px;
+          overflow: hidden;
+
+          .card-img {
+            height: 50%;
+            /* border : 1px solid;*/
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit:cover;
+             
+            }
+          }
+
+          .card-body {
+            height: auto;
+            padding: 10px 10px 10px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .card-text {
+            width: 100%;
+            height: 80px;
+          }
+
+          h2 {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+          }
+
+          h2,
+          span {
+            color: rgb(239, 28, 74);
+          }
+
+          span {
+            margin-top: 4px;
+            font-size: 15px;
+            padding: 2px;
+            width: 100%;
+            display: block;
+          }
+
+          button {
+            background-color: rgb(12, 131, 228);
+            color: white;
+            font-size: medium;
+            border: none;
+            padding: 6px;
+            border-radius: 10px;
+          }
+           button:hover {
+            background-color: #f5d142;
+          }
+
+          button:active {
+            background-color: rgb(117, 30, 198);
+          }
+
+         
+
+          div.card:hover {
+            box-shadow: 2px 3px 2px 1px rgb(65, 70, 70);
+            transition-duration: 2s;
+          }
+          
+          
+        }
+      }
+    }
+  }
+}
+
